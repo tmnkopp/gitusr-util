@@ -1,0 +1,134 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    background: #323232;
+    font-family: 'PT Mono', monospace;
+    font-size: 11.5px; 
+    letter-spacing:1.25px;
+    color: #f4f4f4;
+  }
+  .green{ color: #41FF00; }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 32.5px;
+  } 
+  .body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .dl-horizontal dt {
+    white-space: normal;
+  } 
+  a {
+    color: #ff4500;
+  } 
+  a:hover {
+    color: #f4f4f4;
+    background: #6c6c6c;
+    text-decoration: none;
+  }
+  .nav-tabs{ 
+    border:0px;
+    li{ 
+      border:1px solid #6c6c6c;border-bottom:0px; 
+    }
+    li.active, li a.active{
+      background: #6c6c6c;
+      color: #f4f4f4;
+    }
+    a{   
+      padding:.34em 2em 0em 2em;
+      color: #f4f4f4;
+      font-size:11px;
+      
+    }
+  }
+  input,
+  select,
+  textarea,
+  .form-control {
+    max-width: 100%;
+    border-radius: 0px;
+    margin-bottom: 1rem;
+    font-size: 11px;
+    width: 100%;
+    background: #6c6c6c;
+    color: #f4f4f4;
+    border: 0px;
+    padding: 1rem;
+    letter-spacing:2px;
+  }
+  select{
+    padding: .5rem; 
+  }
+  input[type='checkbox']{
+    width:4px;
+    margin:0px 6px ;
+  }
+    button, input[type*='button'] {
+      color: #ffcc00;
+      cursor:pointer;
+    }
+    textarea  {
+      height: 40vh;
+      &.sm{
+        height:20vh;
+      }
+    } 
+   
+  .form-control, textarea {
+    background: #434343;
+    border: 0px solid #d3d3d3;
+    border-bottom: 0px solid #d3d3d3;
+    color: #c3c3c3;
+  }
+  
+    .form-control:focus {
+      color: #d3d3d3;
+      background-color: #343434;
+      border-color: #80bdff;
+    }
+  
+  .btn {
+    background: #ff4500;
+    border: 0px solid #d3d3d3;
+    color: #323232;
+    cursor:pointer;
+  }
+  nav ul{
+    list-style-type: none;
+  }
+  .nav li {
+    display: inline-block;
+    padding: 0em .25em;
+  }
+  .nav li a:before { 
+    display: inline-block;
+    padding-left: 1px;
+  } 
+  .table th, .table td {
+    padding: 0.35rem;
+    vertical-align: top;
+    border-top: 1px solid #545454;
+  }
+  ol, ul {
+    margin: 0px;
+    padding:0px;
+  }
+
+  table{
+    width:100%;
+    tr td{ width:120px;}
+  }
+  .indent{
+    display:block; margin-left:2em; position:relative;
+  }
+
+  .round-img {
+    border-radius: 50%;
+    max-width:50px;
+  }
+
+  
