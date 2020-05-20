@@ -1,14 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export const RepoItem = ({repo}) => {
+import React, {useContext} from 'react'  
+import GithubContext from '../../context/github/githubContext'; 
+export const RepoItem = ({repo} ) => {
+    const githubContext = useContext(GithubContext);
+   
     return (
         <div className="card">
             <a href={repo.html_url}>{repo.name}</a>
         </div>
     )
 }
-
-RepoItem.propTypes = {
-    
-}
+ 
 export default RepoItem;
