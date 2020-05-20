@@ -1,33 +1,27 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types';
 import Repos from '../repos/Repos.js'; 
-export class User extends Component {
-    componentDidMount(){
-        this.props.getUser(this.props.match.params.login);
-        this.props.getUserRepos(this.props.match.params.login);
-    }    
-    static propTypes ={
-        user: PropTypes.object.isRequired,
-        repos:PropTypes.array.isRequired,
-        getUser: PropTypes.func.isRequired,
-        getUserRepos: PropTypes.func.isRequired 
+const User = ({user,  getUser, getUserRepos, match, repos})  =>  {
 
-    }
-    render() {
-        const {
-            name,avatar_url,location,bio,blog,html_url 
-        } = this.props.user
-        const {
-            loading, repos
-        } = this.props
-        return (
-            <div>
-                {name}
-                {location}
-                {bio}
-                <Repos repos={repos}></Repos>
-            </div>
-        )
-    }
+    useEffect(()=>{
+         getUser( match.params.login);
+         getUserRepos( match.params.login); 
+    },[]);
+      
+    const {  name,avatar_url,location,bio,blog,html_url   } = user 
+    return (
+        <div>
+            {name}  {location}  {bio}
+            <Repos repos={repos}></Repos>
+        </div>
+    )
 } 
+
+User.propTypes ={
+    user: PropTypes.object.isRequired,
+    repos:PropTypes.array.isRequired,
+    getUser: PropTypes.func.isRequired,
+    getUserRepos: PropTypes.func.isRequired 
+
+}
 export default User 
